@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шаблон HTML страницы</title>
+</head>
+
+<body>
+    <header style="background: #f0f0f0; padding: 20px;">
+        <nav style="display: flex; gap: 1rem;">
+            <a href="#home">Главная</a>
+            <a href="#about">Все о мануле</a>
+            <a href="#contact">Контакты</a>
+            <a href="#list">Списки</a>
+            <a href="#table">Таблицы</a>
+            <a href="#form"> Формы</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1> Шаблон HTML страницы</h1>
+            <div style="border: 1px solid rgb(0, 0, 0);">
+
+                <p> Пример ссылки:
+                    <a href="https://vk.com/" target="_blank">ссылка на VK</a>
+                </p>
+                <p>Это пример <strong>строчного</strong> элемента внутри абзаца текста.</p>
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Картинки H2</h2>
+            <figure>
+                <a href="https://www.wikipedia.org/">
+                    <img src="./images/Manul_Timofey_in_April_2025_(1,_cropped).jpg" alt="Manul" width="200px"
+                        height="200px">
+                    <figcaption> Текст под картинкой и ссылка на wiki </figcaption>
+                </a>
+            </figure>
+        </section>
+        <h3 id="list">Списки H3</h3>
+        <ol>
+            <li>строка списка c нумерацией</li>
+            <li>строка списка с нумерацией</li>
+        </ol>
+
+        <ul>
+            <li>строка списка без нумерации(маркировочный)</li>
+            <li>строка списка без нумерации(маркировочный)</li>
+            <ol>
+                <li>Вложенный список</li>
+                <li>Вложенный список</li>
+            </ol>
+        </ul>
+
+        <ol type="I" start="5">
+            <li> Римские цифры start = "5"</li>
+            <li> Римские цифры </li>
+        </ol>
+
+        <ol type="i">
+            <li>Римские цифры </li>
+            <li>Римские цифры</li>
+            <li>Римские цифры</li>
+            <li>Римские цифры</li>
+        </ol>
+
+        <ol type="A">
+            <li> Заглавные буквы </li>
+            <li> Заглавные буквы </li>
+        </ol>
+
+        <ol type="a" reversed>
+            <li> Строчные буквы с reversed </li>
+            <li> Строчные буквы </li>
+        </ol>
+
+        <dl>
+            <dt>Термин</dt>
+            <dd>1 Описание термина </dd>
+            <dd>2 Описание термина </dd>
+        </dl>
+
+        <h4 id="table">Таблицы H4</h4>
+        <p> table 1</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Заголовочная ячейка таблицы</th>
+                    <th>Заголовочная ячейка таблицы</th>
+                    <th>Заголовочная ячейка таблицы</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Заполнение строк таблицы</td>
+                    <td>Заполнение строк таблицы</td>
+                    <td>Заполнение строк таблицы</td>
+                </tr>
+
+                <tr>
+                    <td>Заполнение строк таблицы</td>
+                    <td>Заполнение строк таблицы</td>
+                    <td>Заполнение строк таблицы</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <td> Итоги(tfoot)</td>
+                <td> 12332(tfoot)</td>
+                <td> 123(tfoot)</td>
+            </tfoot>
+        </table>
+
+        <p> table 2</p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Заголовок 1</th>
+                    <th colspan="2"> Объединение по горизонтали colspan ="2" </th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">Объединение по вертикали rowspan="2" </td>
+                    <td> Ячейка 1</td>
+                    <td> Ячейка 2</td>
+                </tr>
+                <tr>
+                    <td> Ячейка 3</td>
+                    <td> Ячейка 4</td>
+                </tr>
+                <tr>
+                    <td rowspan="2"> Яйца</td>
+                    <td> 10 шт.</td>
+                    <td> 100 руб.</td>
+                </tr>
+                <tr>
+                    <td> 30 шт.</td>
+                    <td> 300 руб.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p> table 3</p>
+        <table border="1">
+            <tr>
+                <th></th>
+                <th> Заголовок 1</th>
+                <th> Заголовок 2</th>
+            </tr>
+            <tr>
+                <th>Заголовок 3</th>
+                <td> Ячейка 1</td>
+                <td> Ячейка 2</td>
+            </tr>
+        </table>
+        <h5 id="form">Формы для сбора данных H5</h5>
+        <form action="" method="post">
+            <label for="name">Введите имя:</label>
+            <input type="text" id="name" name="name" placeholder="Имя" required pattern="[A-Za-zА-ЯА-яiё\s]+"
+                title="Регулярным выражением заданы возможные значения">
+
+            <label for="email">Введите почту: </label>
+            <input type="email" id="email" name="email" placeholder="Почта">
+
+            <label for="age">Введите возраст:</label>
+            <input type="number" id="age" name="age" min="1" max="120">
+
+            <label for="date">Введите дату:</label>
+            <input type="date" id="date" name="user_date">
+
+
+            <br><br>
+
+            <label for="subcribe"></label>
+            <input type="checkbox" id="subcribe" name="subcribe"> Чекбокс выбора
+
+
+            <label for="gender">Пол:</label>
+            <select name="gender" id="gender">
+                <option value="" disabled selected>Выберите пол</option>
+                <option value="male">Мужской</option>
+                <option value="female">Женский</option>
+            </select>
+
+            <br><br>
+
+            <p>Выбор без выбора: Манул красивый?</p>
+            <input type="radio" id="best" name="best" value="best">
+            <label for="best">Да</label><br>
+            <input type="radio" id="best_of_the_best" name="best" value="best_of_the_best">
+            <label for="best_of_the_best">Лучший из лучших</label>
+
+            <p>Выбор флажками:</p>
+            <input type="checkbox" id="coding" name="interest" value="coding">
+            <label for="coding">Выбор 1</label><br>
+
+            <input type="checkbox" id="music" name="interest" value="music">
+            <label for="music">Выбор 2</label><br>
+
+            <input type="checkbox" id="sports" name="interest" value="sports">
+            <label for="sports">Выбор 3</label>
+            <br><br>
+
+            <label for="feedback">Отзыв:</label>
+            <textarea name="feedback" id="feedback" rows="4" cols="50"></textarea><br><br>
+
+            <button type="submit">Отправить</button>
+            <button type="reset">Сброс</button>
+            <input type="submit" value="Заблокированная кнопка" disabled>
+        </form>
+        <h6>Загаловок H6</h6>
+    </main>
+    <footer>
+        <p>&copy; Сайт шаблон HTML. Копируй код</p>
+    </footer>
+
+
+
+</body>
+
+</html>
